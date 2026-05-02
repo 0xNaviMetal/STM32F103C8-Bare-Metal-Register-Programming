@@ -29,7 +29,7 @@ Each folder contains the `main.c` and specific configuration headers for that pe
 
 ### Communication Protocols (Wired)
 - [ ] **UART (TX/RX):** Configure baud rate, transmit, and receive data (Polling).
-- [ ] **I2C (Transmit/Receive):** Configure Master mode to communicate with external sensors.
+- [x] **I2C (Transmit/Receive):** Configure Master mode to communicate with external sensors.
 - [ ] **SPI (Master Mode):** High-speed register configuration for external ICs.
 
 ### Analog & Advanced Peripherals
