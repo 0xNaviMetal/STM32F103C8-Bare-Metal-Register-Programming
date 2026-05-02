@@ -24,8 +24,8 @@ Each folder contains the `main.c` and specific configuration headers for that pe
 ## 🚀 Progress Tracker & To-Do List
 
 ### Core & Timing
-- [ ] **System Clock:** Configure HSE, PLL, and set system clock to 72MHz.
-- [ ] **Timers:** Setup Hardware Timers to generate precise microsecond/millisecond delays.
+- [x] **System Clock:** Configure HSE, PLL, and set system clock to 72MHz.
+- [x] **Timers:** Setup Hardware Timers to generate precise microsecond/millisecond delays.
 
 ### Communication Protocols (Wired)
 - [ ] **UART (TX/RX):** Configure baud rate, transmit, and receive data (Polling).
