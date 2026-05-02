@@ -1,13 +1,13 @@
 # STM32F103 Bare-Metal Register Programming
 
 A complete collection of bare-metal C drivers for the STM32F103C8T6 (Blue Pill), written entirely from scratch using direct register manipulation. **Zero HAL (Hardware Abstraction Layer) used.** All configurations are based on the official STM32 **RM0008 Reference Manual**.
-
+<img src="ASSETS/00.jpg" width="400" alt=" ">
 ## 💻 Hardware & Software Setup
 * **Board:** STM32F103C8T6 (Blue Pill)
 * **Programmer:** ST-Link V2 (SWD Interface)
 * **IDE/Compiler:** Keil uVision 5 (MDK-ARM)
 * **Language:** Bare-Metal C 
-
+<img src="ASSETS/2.jpg" width="400" alt=" ">
 ## 📂 Repository Structure
 Each folder contains the `main.c` and specific configuration headers for that peripheral.
 * `/01_Clock_Config`
