@@ -2,7 +2,7 @@
 
 This repository contains a bare-metal I2C Master driver written in C for the STM32 microcontroller (Blue Pill). It demonstrates how to manually configure I2C peripherals, calculate precise timing registers, and manage hardware events to establish two-way communication with a GY-BME280 sensor.
 
-## 🛠️ Hardware Setup & Wiring
+##   Hardware Setup & Wiring
 
 To verify the communication, the physical bus was monitored using a 24MHz 8-channel Logic Analyzer alongside an ST-Link V2 for flashing.
 
@@ -20,7 +20,7 @@ To verify the communication, the physical bus was monitored using a 24MHz 8-chan
 
 ---
 
-## ⏱️ I2C Clock Configuration (CCR & TRISE)
+##   I2C Clock Configuration (CCR & TRISE)
 
 To achieve standard mode I2C speed (100kHz) with an APB1 clock frequency of 36MHz, the Clock Control Register (`CCR`) and Maximum Rise Time (`TRISE`) registers were manually calculated. 
 
@@ -41,7 +41,7 @@ The formula for CCR is `(Tr(SCL) + Tw(SCLH)) / Tpclk1`.
  
 ---
 
-## 🧠 Master Transmitter Sequence & Hardware Events
+##   Master Transmitter Sequence & Hardware Events
 
 This driver avoids standard HAL libraries and operates by directly polling the STM32's Status Registers (`SR1` and `SR2`). The transmission follows the official STM32 Transfer Sequence Diagram.
 
@@ -57,7 +57,7 @@ The custom `I2C_write()` function executes the following hardware events:
 
 ---
 
-## 🔬 Logic Analyzer Verification
+##   Logic Analyzer Verification
 
 To prove the bare-metal code translates correctly to physical electrical signals, the I2C bus was monitored during a test write of data `0x0F` to address `0x76`.
 
@@ -73,5 +73,5 @@ To prove the bare-metal code translates correctly to physical electrical signals
 
 ---
 
-## 📝 Troubleshooting Note
+##   Troubleshooting Note
 During development, if the sensor responds with a NACK (Not Acknowledge) on the logic analyzer, it usually indicates a hardware or addressing mismatch. Ensure that the sensor's `SDO` and `CSB` pins are strictly tied to power/ground rather than left floating, as floating pins will cause the I2C address to drift and ignore master requests.
